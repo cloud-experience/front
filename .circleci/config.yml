@@ -21,11 +21,11 @@ jobs:
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           from: .
-          to: "s3://nuspam-static/frontend"
+          to: "s3://nugaspam.com"
       - aws-s3/copy:
           arguments: "--dryrun"
           from: .
-          to: "s3://nuspam-static/frontend"
+          to: "s3://nugaspam.com"
 
 workflows:
   deploy-frontend:
