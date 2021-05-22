@@ -2,7 +2,8 @@ const searchForm = document.querySelector('.searchForm');
 
 function handleSubmit(event){
   event.preventDefault();
-  fetch('http://api.nugaspam.com/check/bit.ly/33N8hyQ')
+  const targetUrl = input.value;
+  fetch('http://api.nugaspam.com/check/' + targetUrl) //  ex) bit.ly/33N8hyQ
   .then(function(response) {
     return response.json();
   })
