@@ -22,12 +22,20 @@ function handleSubmit(event){
   .then(function(response) {
     return response.json();
   })
-  .then(function(spamdata) {
-    console.log(JSON.stringify(spamdata));
+  .then(function(spamData) {
+    console.log(JSON.stringify(spamData));
+    showSpamData(spamData);
   });
 }
 
-
+function showSpamData(spamData){
+  redirectedUrl.innerHTML = spamData.redirectedURL;
+  value1.innerHTML = '';
+  value2.innerHTML = spamData.word_count;
+  value3.innerHTML = spamData.first_date;
+  value4.innerHTML = spamData.last_date;
+  value5.innerHTML = spamData.hits;
+}
 
 function init(){
   initPage();
