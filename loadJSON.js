@@ -1,6 +1,7 @@
-const searchButton = document.querySelector('.btn');
+const searchForm = document.querySelector('.searchForm');
 
 function handleSubmit(event){
+  event.preventDefault();
   fetch('http://api.nugaspam.com/check/bit.ly/33N8hyQ')
   .then(function(response) {
     return response.json();
@@ -11,7 +12,7 @@ function handleSubmit(event){
 }
 
 function init(){
-  searchButton.addEventListener("submit", handleSubmit);
+  searchForm.addEventListener("submit", handleSubmit);
 }
 
 init();
