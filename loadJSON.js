@@ -1,4 +1,4 @@
-const searchButton = document.getElementsByClassName('btn')
+const searchButton = document.querySelector('.btn');
 
 function handleSubmit(event){
   fetch('http://api.nugaspam.com/check/bit.ly/33N8hyQ')
@@ -11,7 +11,7 @@ function handleSubmit(event){
 }
 
 function init(){
-  searchButton.addEventListener("submit", handleSubmit)
+  searchButton.addEventListener("submit", handleSubmit);
 }
 
 init();
