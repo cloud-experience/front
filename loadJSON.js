@@ -13,3 +13,5 @@ function handleSubmit(event){
 function init(){
   searchButton.addEventListener("submit", handleSubmit)
 }
+
+init();
