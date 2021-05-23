@@ -30,7 +30,13 @@ function handleSubmit(event){
 
 function showSpamData(spamData){
   redirectedUrl.innerHTML = spamData.redirectedURL;
-  value1.innerHTML = '';
+  var isSpam = ''
+  if spamData.word_count > 0 {
+    isSpam = 'O'
+  } else{
+    isSpam = 'X'
+  }
+  value1.innerHTML = isSpam;
   value2.innerHTML = spamData.word_count;
   value3.innerHTML = spamData.first_date;
   value4.innerHTML = spamData.last_date;
