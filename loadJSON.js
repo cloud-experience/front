@@ -28,12 +28,12 @@ function handleSubmit(event){
   });
 }
 
-function showSpamData(spamData){
+function showSpamData(spamData) {
   redirectedUrl.innerHTML = spamData.redirectedURL;
   var isSpam = ''
-  if spamData.word_count > 0 {
+  if (spamData.word_count > 0) {
     isSpam = 'O'
-  } else{
+  } else {
     isSpam = 'X'
   }
   value1.innerHTML = isSpam;
